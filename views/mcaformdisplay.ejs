@@ -1,0 +1,59 @@
+<%- include('./header.ejs') %>
+<div class="container-xl">
+    <div class="col-sm-12">
+        <div class="row">
+            <h1 class="text-center py-4">Display</h1>
+        </div>
+        <div class="row tableoverflow">
+            <table border="1" class="table table-md table-hover table-striped">
+                <thead class="theadt sticky-top">
+                    <tr>
+                        <th>ID</th>
+                        <th>User Name </th>
+                        <th>College</th>
+                        <th>Course</th>
+                        <th>Branch</th>
+                        <th>Status</th>
+                        <th>Comment</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% i=1 %>
+                    <% Btech.forEach((d)=>{ %>
+                        <tr>
+                            <td>
+                              <%= i++ %>
+                            </td>
+                            <td>
+                              <%= d.userName %>
+                            </td>
+                            <td>
+                                <%= d.college %>
+                            </td>
+                            <td>
+                               <%= d.course %>
+                            </td>
+                            <td>
+                                <%= d.branch %>
+                            </td>
+                            <td>
+                               pending
+                            </td>
+                            <td>
+                                wait
+                            </td>
+                            <td>
+                                <a href="/mcaFormView/<%= d._id %>"><i class="fa-solid fa-eye-slash"></i></a>
+                                <a href="/mcaFormEdit/<%= d._id %>"><i class="fa-sharp fa-solid fa-cart-plus p-2"></i></a>
+                            </td>
+                        </tr>
+                   <% })%>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<%- include('./footer.ejs') %>

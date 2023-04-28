@@ -1,0 +1,87 @@
+<%- include('./header.ejs') %>
+
+   
+            <div class="container-xl">
+              <div class="card border-0 shadow-lg m-5">
+                <div class="row card-register">
+                  <div class="col-sm-10 col-md-5 col-lg-5">
+                      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <img src="/image/slider12.jpg" class="d-block w-100" style="height: 540px;"
+                                      alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="/image/slider13.jpg" class="d-block w-100" style="height: 540px;"
+                                      alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                  <img src="/image/slider12.jpg" class="d-block w-100" style="height: 540px;"
+                                      alt="...">
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+                  <div class="col-sm-10 col-md-5 col-lg-5">
+                      <form action="/bcaFormUpdate/<%= d._id %>" method="post">
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
+                              <input type="text" name="userName" value="<%= d.userName %>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">@</span>
+                              <input type="email" name="email" value="<%= d.email %>" class="form-control" placeholder="abc@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                              <span class="input-group-text" id="inputGroup-sizing-default">Mobile No</span>
+                              <input type="tel" name="mobileNo" value="<%= d.mobileNo %>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                            <div class="input-group mb-2">
+                              <span class="input-group-text" id="inputGroup-sizing-default">DOB</span>
+                              <input type="date" name="dob" value="<%= d.dob %>" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                          <div class="mb-2 ">
+                              <label class="mb-2">Gender</label>
+                              <br>
+                              <input type="radio" name="gender" value="male"<%= d.gender == 'male' ? 'checked':'' %>>&nbsp;Male
+                              <input type="radio" name="gender" value="female"<%= d.gender == 'female' ? 'checked':'' %>>&nbsp;Female
+                              <br>
+                          </div>
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" id="inputGroup-sizing-default">Address</span>
+                              <input type="text" value="<%= d.address %>" name="address" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                            </div>
+                          <div class="input-group mb-3">
+                              <label class="input-group-text" for="inputGroupSelect01">College</label>
+                              <select class="form-select" name="college" id="inputGroupSelect01">
+                                <option <%= d.college == 'Bhagalpur Univercity' ? 'selected':'' %>>Bhagalpur Univercity</option>
+                                <option <%= d.college == 'IIT Bambey' ? 'selected':'' %>>IIT Bambey</option>
+                                <option <%= d.college == 'IIT kota' ? 'selected':'' %>>IIT kota</option>
+                              </select>
+                            </div>
+                            <div class="input-group mb-3">
+                              <label class="input-group-text" for="inputGroupSelect01">Course</label>
+                              <select class="form-select" name="course" id="inputGroupSelect01">
+                                <option <%= d.course == 'BCA' ? 'selected':'' %>>BCA</option>
+                              </select>
+                            </div>
+                            <div class="input-group mb-3">
+                              <label class="input-group-text" for="inputGroupSelect01">Branch</label>
+                              <select class="form-select" name="branch" id="inputGroupSelect01">
+                                <option <%= d.branch == 'IT' ? 'selected':'' %>>IT</option>
+                                <option <%= d.branch == 'CS' ? 'selected':'' %>>CS</option>
+                                <option <%= d.branch == 'Electronic' ? 'selected':'' %>>Electronic</option>
+                              </select>
+                            </div>
+                            <div class="form-group text-center">
+                              <button type="submit" class="btn btn-lg btn-block px-5" style="background: #12587a; color:#ffff;">Register</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+              </div>
+               
+            </div>
+       
+ <%- include('./footer.ejs') %>

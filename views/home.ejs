@@ -1,0 +1,161 @@
+<%- include('./header.ejs') %>
+     
+    <!----------------- slider start------ ------->
+    <div class="row">
+        <div class="col-sm-12 px-0">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&w=1000&q=80" class="d-block w-100 " style="height:350px;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.istockphoto.com/id/173598452/photo/university-in-autumn.jpg?s=612x612&w=0&k=20&c=jQqpZuTZ6qXIfWqnCW5nqlExJZO0PO47L-ZiaE8jIk0=" class="d-block w-100 " style="height:350px;" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://media.istockphoto.com/id/1142918319/photo/college-students-on-university-campus.jpg?s=612x612&w=0&k=20&c=FaT9h0xJXSF3AzofWb9ozJtSqaxS4m91uH6C1lmL6xc=" class="d-block w-100" style="height:350px;" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mt-5">
+   
+       <h1 style="font-family:fantasy"><%= name %></h1> 
+
+        <h1> Institute of Engineering & Technology</h1>
+    </div>
+
+    <!---------- card start------------------- -->
+    <div class="container-xl mt-5">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="course-new-card">
+                    <div class="course-new-card-title"><img src="/image/new_red.gif" height="25px" w-100 alt=""> </div>
+                    <div class="course-new-card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci iusto debitis est
+                        laudantium aliquid porro, corrupti quaerat quas iste facilis odit in voluptas, exercitationem
+                        repellendus impedit. Recusandae, ab voluptatum?
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="course-new-card">
+                    <div class="course-new-card-title"><img src="/image/new_red.gif" height="25px" w-100 alt=""></div>
+                    <div class="course-new-card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci iusto debitis est
+                        laudantium aliquid porro, corrupti quaerat quas iste facilis odit in voluptas, exercitationem
+                        repellendus impedit. Recusandae, ab voluptatum?
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="course-new-card">
+                    <div class="course-new-card-title"><img src="/image/new_red.gif" height="25px" w-100 alt=""></div>
+                    <div class="course-new-card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore adipisci iusto debitis est
+                        laudantium aliquid porro, corrupti quaerat quas iste facilis odit in voluptas, exercitationem
+                        repellendus impedit. Recusandae, ab voluptatum?
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <!---------------   Admission card   ---------->
+    <div class="container-xl">
+        <div class="row align-items-center" style="min-height:500px">
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://fastly.picsum.photos/id/89/4608/2592.jpg?hmac=G9E4z5RMJgMUjgTzeR4CFlORjvogsGtqFQozIRqugBk"
+                            alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title text-center">B.Tech </div>
+                        <div class="course-text">
+                            B Tech is a professional undergraduate
+                            engineering degree
+                        </div>
+                        <div class="text-center">
+                            <% if(Bt){ %>
+                                <a href="/btechformdisplay" class="btn btn-dark course-btn ">Display </a>
+                           <% } else{ %>
+                            <a href="/btechForm" class="btn btn-dark course-btn ">Register </a>
+                          <% } %>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://fastly.picsum.photos/id/89/4608/2592.jpg?hmac=G9E4z5RMJgMUjgTzeR4CFlORjvogsGtqFQozIRqugBk"
+                            alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title text-center">BCA </div>
+                        <div class="course-text">
+                            BCA is a three-year Bachelor's Degree in Computer Application
+                        </div>
+                        <div class="text-center">
+                            <% if(Bc){ %>
+                                <a href="/bcaformdisplay" class="btn btn-dark course-btn ">Display </a>
+                           <% } else{ %>
+                            <a href="/BcaForm" class="btn btn-dark course-btn ">Register </a>
+                          <% } %>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://fastly.picsum.photos/id/89/4608/2592.jpg?hmac=G9E4z5RMJgMUjgTzeR4CFlORjvogsGtqFQozIRqugBk"
+                            alt="">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-title text-center">MCA</div>
+                        <div class="course-text">
+                            MCA is a professional post-graduation degree in Computer science
+                        </div>
+                        <div class="text-center">
+                            <% if(Mc){ %>
+                                <a href="/mcaformdisplay" class="btn btn-dark course-btn ">Display </a>
+                           <% } else{ %>
+                            <a href="/mcaForm" class="btn btn-dark course-btn ">Register </a>
+                          <% } %>
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <%- include('./footer.ejs') %>
