@@ -1,6 +1,6 @@
 const mongoose  =require('mongoose')
 // const url = "mongodb://127.0.0.1:27017/AdmissionPortal"
-const live_Url =""
+const live_Url ="mongodb+srv://raghuvanshiritik537:ritikraghuwanshi@cluster0.w44ru4u.mongodb.net/raghuwanshiportal?retryWrites=true&w=majority"
 
 
 const connectdb =()=>{
