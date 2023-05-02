@@ -1,8 +1,8 @@
 const express = require('express')
-const router = express.Router()
 const UserController = require('../controllers/UserController')
 const CourseController = require('../controllers/CourseController')
-const AdminController = require('../controllers/AdminController');
+const AdminController = require('../controllers/AdminController')
+const router = express.Router()
 const Admin_auth = require('../middleware/auth')
 
 
@@ -40,15 +40,15 @@ router.post('/mcaFormUpdate/:id',Admin_auth, CourseController.MCAFormUpdate)
 
 // Admin components router
 router.get('/adminDashboard',Admin_auth, AdminController.DisplayData)
-router.get('/admin/welcome', AdminController.Welcome)
+router.get('/admin/welcome',  AdminController.Welcome)
 router.get('/admin/userDisplay', AdminController.UserDisplay)
-router.get('/admin/userFormDisplay',AdminController.userFormDisplay)
-router.get('/admin/formView/:id', AdminController.UerFormView)
-router.get('/changePassword',Admin_auth, AdminController.ChangePassword)
-router.post('/updatepassword/:id',Admin_auth, AdminController.UpdatePassword)
-router.get('/viewProfile/:id',Admin_auth, AdminController.ViewProfile)
-router.get('/editProfile/:id',Admin_auth, AdminController.EditProfile)
-router.post('/updateProfile/:id',Admin_auth, AdminController.UpdateProfile)
+router.get('/admin/userFormDisplay', AdminController.userFormDisplay)
+router.get('/admin/formView/:id',Admin_auth, AdminController.UerFormView)
+router.get('/changePassword', AdminController.ChangePassword)
+router.post('/updatepassword/:id', AdminController.UpdatePassword)
+router.get('/viewProfile/:id', AdminController.ViewProfile)
+router.get('/editProfile/:id', AdminController.EditProfile)
+router.post('/updateProfile/:id', AdminController.UpdateProfile)
 
 
 module.exports =router

@@ -20,8 +20,7 @@ const { application } = require('express')
 connectdb()
 
 
-//template engin or (ejs setup)
-app.set('view engine', 'ejs')
+
 
 //This is use to get data
 app.use(express.urlencoded({extended:false}))
@@ -43,6 +42,10 @@ app.use(flash());
 
 //route.load
 app.use('/',web)
+
+
+//template engin or (ejs setup)
+app.set('view engine', 'ejs')
 
 //public folder setup
 app.use(express.static('public'))
