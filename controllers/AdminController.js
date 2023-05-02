@@ -16,7 +16,7 @@ class AdminController{
 
 static DisplayData = async (req, res)=>{
     try{
-        const {userName,image, _id, email } = req.user
+        const {userName,image, _id, email } =  req.user
         res.render('admin/dashboard',{name:userName, i:image, id:_id})
     }catch(error){
         console.log(error)
