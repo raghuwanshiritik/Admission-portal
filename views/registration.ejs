@@ -1,5 +1,9 @@
 <%- include('./header2.ejs') %>
-
+<style>
+    .error{
+        color: red;
+    }
+</style>
 <div class="container-xl">
     <div class="card border-0 shadow-lg my-5">
         <div class="row">
@@ -35,25 +39,25 @@
         
                 <% } %>
 
-                <form action="/registerInsert" method="post" enctype="multipart/form-data">
+                <form action="/registerInsert" id="userForm" method="post" enctype="multipart/form-data">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">User Name</span>
-                        <input type="text" name="userName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input type="text" name="userName" id="userName" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                       </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="basic-addon1">@</span>
-                        <input type="email" name="email" class="form-control" placeholder="abc@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="abc@gmail.com" aria-label="Username" aria-describedby="basic-addon1">
                       </div>
                       <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
-                        <input type="password" name="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input type="password" name="password" id="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                       </div>
                       <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Confirm Password</span>
-                        <input type="password" name="confirmpassword" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        <input type="password" name="confirmpassword" id="confirmpassword" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                       </div>
                       <div class="input-group mb-3">
-                        <input type="file" name="image" class="form-control" id="" required>
+                        <input type="file" name="image" accept="image/png,image/gif,image/jpg" class="form-control" id="" required>
                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                       </div>
                       <div class="form-group text-center pb-2">
@@ -65,5 +69,7 @@
         </div>
     </div>  
 </div>
-
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="/js/jquery.validate.min.js"></script>
+<script src="/js/custom.js"></script>
 <%- include('./footer.ejs') %>
